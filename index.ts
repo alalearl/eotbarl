@@ -1,4 +1,4 @@
-import { serve } from "bun";
+// import { serve } from "bun";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
 const PORT = process.env.PORT || 3000;
@@ -66,7 +66,7 @@ const handleWebhook = async (req: any) => {
   });
 };
 
-serve({
+Bun.serve({
   port: PORT,
   async fetch(request: Request) {
     const { method } = request;
